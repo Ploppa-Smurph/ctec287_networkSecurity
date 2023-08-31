@@ -350,8 +350,50 @@
 
       compliance scans can be performed - they are necessary for some organizations because of regulatory standards    
 <h3>Threat Hunting</h3>
+       technique that utilizes insights gained from threat intelligence to proactively discover evidence of TTPs present within a network or system
+           <i>Threat Hunting is in contrast to Penetration Testing. Threat Hunting is based on data within the system, while pen testing attempts intrusion as a show of system weakness</i> 
+     <b>Advisories and Bulletins</b> - threat hunting is labor intensive and needs to be performend with clear goals
 
-<h2>03D Explain Penetration Testing Concepts</h2>    
+     <b>Intelligence Fusion</b> - organizations with SIEM (Security Information and Event Management) keep the analytics platform up to date with TTP and IoC threat data feeds
+
+     <b>Maneuver</b> - when investigating a live threat remember the adversarial nature of of hacking
+         maneuvering is taken from the military term and means not giving away your position and trying to out move the attacker
+<h2>03D Explain Penetration Testing Concepts</h2>  
+          difference between pen tester (red team) & hacking?? jail time 
+
+       3 security auditing areas: 
+          - Pen Tester: targets systems, finds specific weaknesses 
+
+          - Red Team: follows up on pen testing, tests an entire enterprise, uses attack model / 'kill chain'
+
+          - Vulnerability Analyst: automated scanning
+
+     Security Auditors search for APTs (Advanced Persistent Treats)
+       APT Chain:
+         <i>Planning -> Malware Introduction -> Command & Control -> Lateral Movement -> Target Identification -> Exfiltration (Attack Event) -> Retreat</i>
+
+     many times APTs are operating in a network for an extended period and gathering data until they deploy their load   
+     
+   <b>CYBER KILL CHAIN Steps and Teamwork</b>
+     <i>Step</i>                                  <i>Pen Tester</i>                                    <i>Security Analyst</i> 
+   <b>Reconnaissance</b>         <b><i>Attack Pattern, threat landsapes, scans</i></b>     <b><i>Social Engineering detection, Traffic identification</i></b>
+   <b>Weaponization</b>          <b><i>Coupling Remote Access with an Exploit</i></b>      <b><i>Noticing 'cracks' between systems. Knowing business value of system</i></b>
+   <b>Delivery</b>               <b><i>Transmission of weapon. Software install</i></b>    <b><i>Application being installed. Monitoring of processes. End user complaints</i></b>
+   <b>Exploitation</b>           <b><i>Triggering the code to conduct the exploit</i></b>  <b><i>Alerts, either by end users or software of security professionals</i></b>
+   <b>Installation</b>           <b><i>Code runs persistently</i></b>                      <b><i>Identifying application behavior. Look for new application on system</i></b>
+   <b>Command & Control</b>      <b><i>Traffic dedicated to managing installed code</i></b><b><i>System behaving abnormally, slowdowns</i></b>
+   <b>Actions on Objective</b>   <b><i>Involves exfiltration of data</i></b>               <b><i>Files deleted or added. New Software. Newly opened ports</i></b>
+
+  pen testing will have a stated agreement. These are contracts that are signed, otherwise you are hacking
+
+  Logical vs Physical pen testing
+     - physical - can you get into a building, can you get into a secure area?
+     - logical  - penetrating network, trying to get into systems that you are not authenticated for
+
+     - 'white box' audit - you will have limited or full documentation of the system
+     - 'black box' audit - have no idea what system you are trying to penetrate
+
+  
 <h3>Penetration Testing</h3>
 <h3>Rules of Engagement</h3>
 <h3>Exercise Types</h3>
