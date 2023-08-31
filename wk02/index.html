@@ -115,12 +115,77 @@
                (or <i>-A</i> for both OS and version)            
           - Device Type - identifies devices as routers, switches, NAS boxes, printers, webcams, etc..     
 <h3>Netstat and Nslookup</h3>
+     <b>netstat</b> - shows state of TCP/UDP ports on local machine; can see service misconfigurations
+        can alsow be used to identify suspect remote connections to services on local host
 
+        <b><i>netstat -ano</i></b>  -- very helpful when trying to identify malware.
+            <i>-a</i> display active TCP and UDP connections, plus open (listening) TCP connections
+            <i>-n</i> suppress name resolution, host IP address and ports are shown in output
+            <i>-o</i> shows PID (Process ID) of application or service that has port opened
+
+     <b>nslookup / dig</b> - query name records for a given domain
+         misconfigured DNS service may allow a 'zone transfer' which will give an attacker complete records of every host in the domain
+     
+         'nslookup' works for both Windows and Linux; 'dig' is used in Linux
 <h3>Other Reconnaissance and Discovery Tools</h3>
+    <b>the Harvester</b> - scanns domain or company for public data, including email, names, subdomains, IPs, URLs and more
+                    <a href="https://github.com/laramies/theHarvester">link to github 'the Harvester'</a>
+    
+    <b>dnsenum</b> - packages 'dig', 'whois' and more host identification tools into 1
+            ** not updated since 2015 <a href="https://github.com/fwaeytens/dnsenum">link to github 'dnsenum'</a>                     
+
+    <b>scanless</b> - uses 3rd party sites to disguise IP that port scans are coming from
+                    <a href="https://github.com/vesche/scanless">link to github 'Scanless'</a>       
+
+    <b>curl</b> - used for performing data transfer and supports many protocols
+    
+    <b>Nessus</b> - commercial vulnerability scanner, pulls list of services and version information from the host
+                     free to use on small home networks, or available as a local (Nessus Manager) or cloud (Tenable Cloud) versions.  
 <h3>Packet Capture and TCPdump</h3>
+     <b>Packet Analysis</b> - deep frame-by-frame scrutiny of capture frames
+
+     <b>Protocol Analysis</b> - using statistical tools to analyze a sequence of packets 
+
+     <b>tcpdump</b> - command line packet capture tool in Linux. 
+               often used with filter expressions to reduce number of frames captured: 
 <h3>Packet Analysis and Wireshark</h3>
+     <b>traffic analysis</b> - protocol / packet analyzer working with a sniffer to view data flow across network
+
+     <b>wireshark</b> - open-source graphical packet capture and analysis utility 
+        various tools are built into wireshare: 
+           <b><i>I/O graph</i></b> - 
 <h3>Packet Injection and Replay</h3>
+       Ettercap, Scapy, and hping
+
+     <b>hping</b> - open source spoofing tool that provides pen tester with ability to craft network packets to exploit vulnerable firewalls and IDSs
+          hping performs following tests:
+          <i>Host/Port detection and firewall testing</i> - used to probe IP addresses and TCP/UDP ports for responses
+
+          <i>Traceroute</i> - if ICMP is blocked on local network, hping offers alternate way of mapping out network routes
+
+          <i>Denial of Service (DoS)</i> - hping can perform flood-based DoS attacks from randomized source IPs 
+
+     <b>tcpreplay</b> - takes previously captured network traffic (saved as .pcap) and reeplays it through a network interface      
 <h3>Exploitation Frameworks</h3>
+     <b>Remote Access Trojan (RAT)</b> - malware that give advesary means of remotely accessing network
+
+     <b>expolitation framework</b> - uses vulnerabilities identified by automated scanners and launches scripts to attempt to deliver matching exploits
+          <b><i>CVE - Common Vulnerability and Exposure</i></b>
+     
+     <b>Metasploit</b> - most well known exploit framework, can be used closesly with <b><i>Nexpose</i></b> vulnerability scanner
+
+     <b>Sn1per</b> - framework designed for pentesting and evidence gathering. 
+            Sn1per can integrate with Metasploit and Nikto to run autotmated suites of tests
+
+     <b>fireELF</b> - injecting fileless exploit for Linux host
+
+     <b>RouterSploit</b> - vulnerability scanning and exploit modules
+
+     <b>Browser Exploitation Framework (BeEF)</b> - recovering web session information and exploiting client side script
+
+     <b>Zed Attack Proxy (ZAP)</b> - scanning tools and scripts for web app and mobile app security testing
+     
+     <b>Pacu</b> - scanning and exploit tool for AWS (Amazon Web Service)
 <h3>Netcat</h3>
 
 <h2>03B Explain Security Concerns with General Vulnerability Types</h2>    
