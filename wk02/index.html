@@ -391,13 +391,58 @@
      - logical  - penetrating network, trying to get into systems that you are not authenticated for
 
      - 'white box' audit - you will have limited or full documentation of the system
-     - 'black box' audit - have no idea what system you are trying to penetrate
-
-  
+     - 'black box' audit - have no idea what system you are trying to penetrate  
 <h3>Penetration Testing</h3>
+     Pen Testing - use of authorized hacking techniques to discover and exploit weaknesses in a target system 
+       (aka Ethical Hacking) 
+      - <b>Verify Threat Exists</b> - use surveillance, social engineering, network scanners, and vulnerability assement tools to identify a vector by which vulnerabilities can be exploited
+      
+      - <b>Bypass Security Controls</b> - look for ways to attack the system, logical or physical
+
+      - <b>Actively Test Security Controls</b> - probe controls for configuration weaknesses and errors, such as weak passwords or software vulnerabilities
+
+      - <b>Exploit Vulnerabilities</b> - prove the vulnerability is a high risk by exploiting it to gain access to data or install backdoors
+
+     a passive vulnerability assessment may discover an unpatched SQL server 
+       pen testing is a highly invasive active scan that will tyr to expolit the vulnerability to 'pwn' the server 
 <h3>Rules of Engagement</h3>
+     the Rules of Engagement is what seperates a pen tester from a hacker
+
+     <b>Attack Profile</b>
+          - Black Box: no privileges and may not know anything about the network and security
+                requires a reconnaissance phase; useful to simulate behavior of external threat
+
+          - White Box: known environment; given privileges to system and has access.
+                tester skips reconaissance phase; simulate behavior of privileged inside threat
+
+          - Gray Box: partially known environment
+
+     <b>Bug Bounty</b> - vendor offers rewards for reporting vulnerabilities 
 <h3>Exercise Types</h3>
+     <b>Red Team</b>    - offensive role; infiltrate the target
+
+     <b>Blue Team</b>   - defensive role; monitors alerts and controls to detect and prevent infiltration
+
+     <b>White Team</b>  - sets rules of engagement
+
+     <b>Purple Team</b> - red and blue team meet during the exercise and give each other updates 
 <h3>Passive and Active Reconnaissance</h3>
+     black box testing starts with a reconaissance phase
+      - Active Reconaissance - can alert target that someone is querying their network and probing their ports
+      - Passive Reconaissance - is not intrusive, use outside sources to gather intelligence
+
+     <b>OSINT Open Source Intelligence</b> - web searches, social media, and sites that scan of vulnerabilities in internet connencted devices
+     
+     <b>Social Engineering</b> - obtaining information, access to premesis, or access to user account through persuasion
+
+     <b>Footprinting</b> - software tools (ex: nmap) to obtain information about a host or network topology.
+                           Most forms of footprinting are active scanning; an example of passive footprinting is packet sniffing
+          
+     <b>War Driving</b> - mapping the location and type of wireless networks operated by the target. 
+                 attacker might position a rouge access point device (ex: Hak5 Pineapple)
+
+     <b>Drones/UAV (Unmanned Aerial Vehicle)</b> - testers reconnoiter premises and perform war driving from the air 
+                 drones have also been used to drop USB drives as a form of social engineering
 <h3>Pen Test Attack Life Cycle</h3>
 </pre>    
 </body>
