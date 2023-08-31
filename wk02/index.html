@@ -280,12 +280,75 @@
 
      <b>Penetration Testing</b> - 
 <h3>Vulnerability Scan Types</h3>
+     <b>Network Vulnerability Scanner</b> - designed to test network hosts, including PCs, mobile devices, servers, routers, and swithces
+          - examines organization's on-premise systems, applications, and devices. Then compares results agains configuration template and known vulnerabilities
+               1st scan phase: run detection scan to discover hosts on a particular IP
+               2nd phase: a target range of hosts is probed to detect running services, patch level, security configuration and policies, network shares, unused accounts, weak passwords, antivirus config and more...
+         
+         Network Vulnerability Scanners are configured with a database of known software and configuration vulnerabilities. 
+
+     <b>Application and Web Application Scanner</b> - dedicated scanners configured with more detailed and specific scripts to test for known attacks as well as scan for missing patches and weak configurations. 
+          ex: Nikto (web application scanner) -- looks for known web exploits, such as SQL injection and Cross-Site Scripting (XSS)
+                may also check source code and database security to detect vulnerabilities
 
 <h3>Common Vulnerabilities and Exposures</h3>
+        CVEs - often described as a vulnerability feed 
+          - Nessus tool describes as 'plugins'
+          - OpenVAS refers to them as 'Network Vulnerability Tests' (NVTs)
+          
+     many Network Vulnerability Scanners use the SCAP (Secure Content Automation Protocol) to obtain feed or plug-in updates
+     <b>SCAP Secure Content Automation Protocol</b> defines ways to comp[are actual configuration of a system to target-secure baseline
+     
+     CVE (Common Vulnerabilities and Exposures) - dictionary of vulnerabilities 
+          <a href="https://cve.mitre.org/">link to Mitre.org CVE list</a>
+
+       elements of the CVE: 
+          - Identifier in format: CVE-YYYY-####
+          - Brief description of the vulnerability
+          - Reference list of URLs that supply more information about the vulnerability
+          - Date vulnerability entry was created
+          
+     <b>CVSS Common Vulnerability Scoring System</b> - the ranking system that for vulnerability severity
+          a scale of 0 - 10 -- the CVSS is maintained by the Forum of Incident Response and Security Teams    
 <h3>Intrusive vs Non-intrusive Scanning</h3>
+     <b>Scan Intrusiveness</b> - measure of how much the scanner interacts with the target
+
+      <b>Active (Intrusive Scanning)</b> - probing a device's configuration using a network conection with the target. 
+             active scanning uses more bandwidth. ex: agent-based scanning ??
+                expolitation frameworks is highly intrusive and is more involved with 'pen testing' more than automated vulnerability scanning
+
+      <b>Passive (Non-Intrusive Scan)</b> - using readily available information from websites
+          <a href="https://zeek.org/">link to the Zeek open-source Network Security Monitoring Tool</a>
 <h3>Credentialed vs Non-credentialed Scanning</h3>
+       <b>Credentialed Scanning</b> - scan is able to login to the host and has user account rights 
+               very in-depth analysis: 
+                    - detect application or security setting misconfigurations
+                    - demonstrates what an attack on the inside can do 
+                    - more intrusive than non-credentialed scan
+
+       <b>Non-credentialed Scan</b> - tests host without having access into the system
+               will try routines such as: 
+                    - dictionary attack on default device passwords
+                    - often used to simulate what an external threat may uncover
 <h3>False Positives, False Negatives, and Log Review</h3>
+       scanning tools generate summary reports of all vulnerabilities discovered during the scan. 
+
+       false positives: are identified by the scanner as vulnerable, when they are not
+         ex: a scan states a known port is targeted by malware, but after researching you see that port is NOT open on the network firewall
+
+       false negatives: potential vulnerabilities that are not identified durint the scan
+       
+       always make certain to review network logs to stay aware of the network
 <h3>Configuration Review</h3>
+       generally part of a 'Credentialed scan'
+         compares configuration settings on the system with known default or poor configurations
+
+     <b>SCAP Security Content Automation Protocol</b> - allows compatible scanners to determine whether a computer meets the configuration baseline
+          - Open Vulnerability and Assesment Language (OVAL) - an XML schema for describing system security state and querying vulnerability reports and information
+          
+          - Extensible Configuration Checklist Description Format (XCCDF) - XML schema for developing and audinting best-practice configuration checklists and rules
+
+      compliance scans can be performed - they are necessary for some organizations because of regulatory standards    
 <h3>Threat Hunting</h3>
 
 <h2>03D Explain Penetration Testing Concepts</h2>    
