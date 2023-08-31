@@ -49,10 +49,29 @@
       Reconnaissance is an assessment activity
        -- maps potential attack surface
        -- identify nodes and connections that make up network
+
+     passive scan == using site such as <a href="https://www.shodan.io/">'shodan.io'</a> or  'whois' or other websites to discover information
+     active scan  == using tools ie: Metagoofil; 
+               metagoofil downloads html, pdf, txt and other files and then extracts usernames and programs (including version information) that are on the network
+                  allows hackers to determine exploits
+               nmap == can be used with scripts to obtain more detailed information
+                    nmap is a simple network topology scanner
+               nmapfe (in zenmap) -- is a GUI frontend for using nmap
 <h3>Ipconfig, Ping, and ARP</h3>
-     <b>ipconfig</b>
-     <b>ifconfig</b>
-     <b>ping</b>
+     topology scanning aka 'footprinting'
+     <b>ipconfig</b> - shows configuration assigned to network interfaces in Windows
+                           if the network uses DHCP, it will also point to the DHCP server IP address
+     
+     <b>ifconfig</b> - show configuration of network interfaces in Linux
+
+     <b>ping</b> - probe a host on a particular IP address using ICMP (Internet Control Message Protocol)
+          you can use scripting to create loops to increase the use of Ping
+
+     <b>arp</b>  - Address Resolution Protocol (arp) - command can be used to display local machines ARP cache
+                the ARP cache shows MAC address of the interfaces associated with each IP address
+                  ex: sign of a man in the middle attack is that the MAC address will not match the IP address associated with the router
+
+    ** in linux use 'iproute2' instead of arp, route, and traceroute               
 <h3>Route and Traceroute</h3>
      <b>tracert</b>
      <b>traceroute</b>
