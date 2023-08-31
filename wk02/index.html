@@ -200,12 +200,63 @@
 
 <h2>03B Explain Security Concerns with General Vulnerability Types</h2>    
 <h3>Software Vulnerabilities and Patch Management</h3>
+     <b>Operating System (OS)</b> - application exploit that could allow privilege escalation
+          ex: 'Dirty COW' can exploit the Linux kernel
 
+     <b>Firmware</b> - vulnerabilities in the BIOS/UEFI that controls boot process, or device firmware bugs.
+            Internet of Things (IoT) run OS code as a type of firmware.
+          ex: Intel AMT vulnerability
 <h3>Zero-Day and Legacy Platform Vulnerabilities</h3>
+     <b>Zero-Day</b> - exploit that is exposed before a vendor has a chance to patch it
+
+     <b>Legacy Platfor</b> - older system that is no longer patchable (vendor no longer maintains / updates code)
+        must be isolated from the rest of the network in order to secure, because the vendor is no longer patching the software
 <h3>Weak Host Configurations</h3>
+     <b>Default Settings</b> - deploying a device using only default settings is weak
+
+     <b>Unsecured Root Account</b> - adversaries can gain control of Administrator/Super User acount and wreak havok
+            effective user management and authorization policies must be enforced
+
+     <b>Open Permissions</b> - provisioning data without differentiating access rights for user groups. 
 <h3>Weak Network Configurations</h3>
+    vulnerabiltiy can arise from running unnecessary services or using weak encryption
+     <b>Open Ports and Services</b> - running unnecessary services or having open ports increases the 'Attack Surface' of the network
+       - restrict endpoint access allowed by service 
+       - disable services installed by default, but not needed
+       - services that should be available on the private network should have access blocked at ports on the border firewall 
+
+     <b>Unsecure Protocols</b> - unsecured protocols transmit data as 'plaintext'
+
+     <b>Weak Encryption</b> - can allow unauthorized access to data
+       - simple passwords can lead to brute-force enumeration, or dictionary enumeration
+       - if weak encryption is used then a program can brute-force the enumeration 
+       - if the key falls into the hands of an unauthorized user
+
+     <b>Errors</b> - error messages can be revealing and can tell threat actors more about how to exploit the network
 <h3>Impacts from Vulnerabilities</h3>
+     <b>Data Breaches and Data Exfiltration Impacts</b> - 
+          - Data Breach -  event where confidential data is read, transferred, modified, or deleted without authorization.
+                can be accidental or intentional
+
+          - Data Exfiltration - ALWAYS Malicious -- data is breached and then transferred to an external network or media
+     
+     <b>Identity Theft Impacts</b> - privacy breach where threat actor is able to use personal details for fraudulant activity
+
+     <b>Data Loss and Availability Loss Impacts</b> - data becomes unavailable, either permenantly or temporarily
+          this affects the Availabilty of the CIA Triad -- can have a severe impact on business work flow
+
+     <b>Financial and Reputation Impacts</b> - breaches cause damage to businesses' reputation and can result in fines, financial damage, and loss of business
 <h3>Third-Party Risks</h3>
+     <b>Vendor Management</b>
+
+     <b>Outsourced Code Development</b>
+
+     <b>Data Storage</b>
+          - 
+          - 
+          - 
+
+     <b>Cloud-based vs On-premises Risks</b>
 
 <h2>03C Summarize Vulnerability Scanning Techniques</h2>    
 <h3>Security Assessments</h3>
