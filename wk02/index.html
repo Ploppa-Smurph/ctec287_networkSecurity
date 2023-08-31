@@ -73,15 +73,49 @@
 
     ** in linux use 'iproute2' instead of arp, route, and traceroute               
 <h3>Route and Traceroute</h3>
-     <b>tracert</b>
-     <b>traceroute</b>
-     <b>pathping</b>
+     <b>route</b> - view and configure the host's local routing table
 
+     <b>tracert</b> - uses ICMP probes to report Round Trip Time (RTT) for hops between local and remote host
+     
+     <b>traceroute</b> - Linux version of the tool, uses UDP probes rather than ICMP
+     
+     <b>pathping</b> - Windows - provides statistics for latency and packet loss over a longer period
+          <b>mtr</b> - Linux version of the tool  
+    
+       -- high latency at the default gateway compared to the baseline might indicate a man-in-the-middle attack 
+
+     ** in linux use 'iproute2' instead of arp, route, and traceroute
 <h3>IP Scanners and Nmap</h3>
      <b>SNMP (Simple Network Management Protocol)</b>
-     <b>nmap</b>
+
+     <b>Nmap Security Scanner</b> - popular open source IP scanner
+        Nmap pings and sends TCP ACK packet to ports 80 & 443 to determine if a host is present 
 <h3>Service Discovery and Nmap</h3>
+     after finding the IP addresses and Hosts on a network we discover which OSs are in use on the system, 
+         which network service each host is running, and which application software is underpinning those services
+
+     <b>TCP SYN <i>(-sS)</i></b> - fast technique (aka Half-Open Scanning)
+                                  the scanning host reqests a connection and then does not acknowledge
+                                  the target's response to the scan's SYN packet identifies the port state
+                              
+     <b>UDP scans <i>(-sU)</i></b> - does not use ACKs - nmap needs to wait and this can take a longer time.
+                                   CAN be combined with TCP scan
+                                   
+     <b>Port Range <i>(-p)</i></b> - by default nmap scans 1000 commonly used ports as listed in configuration file
+                                        <i>-p</i> arguement is used to scan specific port ranges                               
+
+     <b>fingerprinting</b> - detailed analysis of services on a particular host 
+                 aka 'banner grabbing'
+
+     when sercvices are discovered you can use Nmap with <i>-sV</i> or <i>-A</i> switch to probe a host more intensively
+        you can discover: 
+          - Protocol - scans and lists what protocols are being used at which port
+          - Application Name and Version - ex: Apache Web Server or Windows IIS
+          - OS type and Version - use the <i>-o</i> to get the OS,
+               (or <i>-A</i> for both OS and version)            
+          - Device Type - identifies devices as routers, switches, NAS boxes, printers, webcams, etc..     
 <h3>Netstat and Nslookup</h3>
+
 <h3>Other Reconnaissance and Discovery Tools</h3>
 <h3>Packet Capture and TCPdump</h3>
 <h3>Packet Analysis and Wireshark</h3>
