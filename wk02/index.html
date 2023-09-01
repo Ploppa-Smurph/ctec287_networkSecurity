@@ -444,6 +444,109 @@
      <b>Drones/UAV (Unmanned Aerial Vehicle)</b> - testers reconnoiter premises and perform war driving from the air 
                  drones have also been used to drop USB drives as a form of social engineering
 <h3>Pen Test Attack Life Cycle</h3>
+     after Reconaissance a pen tester will begin the <b><i>Initial Exploitation</i></b> phase and then move to the 
+     <b><i>Securing and Widening access</i></b> phase this involves many tools:
+
+     - <b>Persistence</b> - 
+
+     - <b>Privilege Escalation</b> - 
+
+     - <b>Lateral Movement</b> - 
+
+     - <b>Pivoting</b> - 
+
+     - <b>Action on Objectives</b> - 
+
+     - <b>Cleanup</b> - 
+
+<h2>Lesson 03: Quiz</h2>
+<b>An IT director reads about a new form of malware that targets a system widely utilized in the company’s network. The director wants to discover whether the network has been targeted, but also wants to conduct the scan without disrupting company operations or tipping off potential attackers to the investigation. 
+     Evaluate vulnerability scanning techniques and determine the best option for the investigation.</b>
+  <i>Threat Hunting is based on analysis of data within a system and is much less disruptive than pentesting</i>
+
+<b>Compare and contrast vulnerability scanning and penetration testing. Select the true statement from the following options.</b>  
+  <i>Vulnerability scanning and penetration testing can use passive or active reconnaissance techniques. A passive approach tries to discover issues without causing an impact to systems, whereas an active approach may cause instability on a scanned system.</i>
+
+<b>A network administrator uses an automated vulnerability scanner. It regularly updates with the latest vulnerability feeds.  If the system regularly performs active scans and returns the presence of vulnerabilities when they do not exist, 
+      what type of error is the system most likely making?</b>  
+  <i>A false positive is something that is identified by a scanner or other assessment tool as being a vulnerability, when in fact it is not.</i>    
+
+<b>15.0% complete
+     Question
+     Which statement best explains the differences between black box, white box, and gray box attack profiles used in penetration testing?</b>  
+  <i>A black box penetration tester receives no privileged information, while a white box tester has complete access. A white box test may follow up on a black box test.</i>    
+
+<b>Analyze and eliminate the item that is NOT an example of a reconnaissance technique.</b>
+  <i>Initial Exploitation</i> from the options (OSINT - Open Source Intelligence, Social Engineering, Scanning)   
+
+<b>A network manager needs a map of the network's topology. The network manager is using Network Mapper (Nmap) and will obtain the visual map with the Zenmap tool. If the target IP address is 192.168.1.1, 
+      determine the command within Nmap that will return the necessary data to build the visual map of the network topology.</b>  
+  <i>nmap -sn --traceroute 192.168.1.1</i>
+
+<b>In which of these situations might a non-credentialed vulnerability scan be more advantageous than a credentialed scan?</b>  
+  <i>Non-credentialed scanning is often the most appropriate technique for external assessment of the network perimeter or when performing web application scanning.
+
+     A non-credentialed scan proceeds by directing test packets at a host without being able to log on to the OS or application. A non-credentialed scan provides a view of what the host exposes to an unprivileged user on the network.</i>
+
+<b>A system administrator must scan the company’s web-based application to identify which ports are open and which OS/CPE can be seen from the outside world. Determine the syntax that should be used to yield the 
+     desired information if the administrator will be executing this task from a Linux command line.</b>     
+  <i>The correct syntax is nmap -O. When the -O switch is used with nmap, it displays open ports and the installed operating system, but does not show the version</i>   
+
+<b>An outside security consultant updates a company’s network, including data cloud storage solutions. The consultant leaves the manufacturer’s default settings when installing network switches, assuming the vendor shipped the switches 
+     in a default-secure configuration. Examine the company’s network security posture and select the statements that describe key vulnerabilities in this network.</b>  
+  <i>Default configurations in devices, whether they come from vendors in a secure state or not, may not cater to specific organizational needs. Such configurations might have unnecessary services running or might not be optimized for a particular business environment.
+
+     Relying on the manufacturer default settings when deploying an appliance or software applications is a weak configuration. Although many vendors ship products in secure default configurations, it is insufficient to rely on default settings.
+     
+     Default settings may leave unsecure interfaces enabled that allow an attacker to compromise the device. Weak settings on network appliances can allow attackers to move through the network unhindered and snoop on traffic.</i>
+
+<b>Following a data breach at a large retail company, their public relations team issues a statement emphasizing the company’s commitment to consumer privacy. Identify the true statements concerning this event. </b>     
+  <i>A privacy breach may allow the threat actor to perform identity theft or to sell the data to other malicious actors. Malicious actors may obtain account credentials or use personal details and financial information to make fraudulent credit applications and purchases.
+
+
+     A data breach can cause a data exfiltration event to occur. A data exfiltration event is always intentional and malicious.
+     
+     
+     A data breach event is where confidential data is read or transferred without authorization. A data breach, unlike data exfiltration, can be intentional/malicious or unintentional/accidental.</i>
+  
+<b>Identify the command that can be used to detect the presence of a host on a particular IP address.</b>
+  <i>The ping command can be used to detect the presence of a host on a particular IP address or that responds to a particular host name. This command is a fast and easy way to determine if a system can communicate over the network with another system.</i>  
+
+<b>A hacker sets up a C2 network to control a compromised host. What refers to the hacker’s ability to reconnect to the compromised host and use it as a RAT or backdoor?</b>  
+  <i>Persistence refers to the hacker’s ability to reconnect to the compromised host and use it as a Remote Access Tool (RAT) or backdoor. To do this, the hacker must establish a Command and Control (C2 or C&C) network.</i>
+
+<b>Which of the following statements summarizes a disadvantage to performing an active vulnerability scan?</b>
+  <i>Scan intrusiveness is a measure of how much the scanner interacts with the target. Active scanning consumes more network bandwidth than passive scanning.
+
+     Active scanning means probing the device's configuration using some type of network connection with the target. This type of scanning runs the risk of crashing the target of the scan or causing some other sort of outage.</i>  
+
+<b>During a penetration test, systems administrators for a large company are tasked to play on the white team for an affiliated company. Examine each of the following roles and determine which role the systems admins will fill.</b>
+  <i>A white team sets the rules of engagement and monitors the exercise, providing arbitration and guidance, and if necessary, halt the exercise. If the red team is third party, the white team will include a representative of the consultancy company.</i>  
+
+<b>Select the statement which best describes the difference between a zero-day vulnerability and a legacy platform vulnerability.</b>
+  <i>A zero-day vulnerability is exploited before the developer knows about it or can release a patch. These can be extremely destructive, as it can take the vendor some time to develop a patch, leaving systems vulnerable in the interim.
+
+     A legacy platform is no longer supported with security patches by its developer or vendor. By definition, legacy platforms are not patchable.</i>  
+
+<b>A manufacturing company hires a pentesting firm to uncover any vulnerabilities in their network with the understanding that the pen tester receives no information about the company’s system. 
+     Which of the following penetration testing strategies is the manufacturing company requesting?</b>
+  <i>Black box (or blind) is when the pen tester receives no privileged information about the network and its security systems. Black box tests are useful for simulating the behavior of an external threat.</i>  
+
+<b>Select the appropriate methods for packet capture.</b>
+  <i>Wireshark and tcpdump are packet sniffers. A sniffer is a tool that captures packets, or frames, moving over a network.
+
+     Wireshark is an open source graphical packet capture and analysis utility. Wireshark works with most operating systems, where tcpdump is a command line packet capture utility for Linux.</i>  
+
+<b>Encryption vulnerabilities allow unauthorized access to protected data. Which component is subject to brute-force enumeration?</b>
+  <i>Weak encryption vulnerabilities allow unauthorized access to data. An algorithm or cipher used for encryption has known weaknesses that allow brute-force enumeration.</i>  
+
+<b>A contractor has been hired to conduct penetration testing on a company's network. They have decided to try to crack the passwords on a percentage of systems within the company. 
+     They plan to annotate the type of data that is on the systems that they can successfully crack to prove the ease of access to data. Evaluate the penetration steps and determine which are being utilized for this task.</b>
+  <i>Test Security Controls; Exploit Vulnerabilities</i>  
+
+<b>As the result of a recent breach, a cyber technician is tasked with reviewing various attack vectors associated with escalation of privileges. Which of the following vector escalation vulnerabilities can be 
+     associated with an OS kernel file or shared library allowing malware code to run with higher access rights?</b>
+  <i>A vulnerability in an OS kernel file or shared library can allow privilege escalation, where the malware code runs with higher access rights (system or root). Root or system accounts are considered superuser accounts with administrative privileges.</i>  
 </pre>    
 </body>
 </html>
