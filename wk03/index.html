@@ -146,16 +146,23 @@
        ex: disgruntled system admin creates scripted trap that runs if their user account is deleted; this 'logic bomb' is known as a 'mine'
        ex02: event is scheduled to run at specific date and time; example of a 'time bomb'
 <h4>Malware Indicators</h4>
-    <b>Antivirus Notifications</b> - 
+    <b>Antivirus Notifications</b> - good AV software should notify user; mostly for EPPs (End Protection Platforms)
 
-    <b>Resource Consumption</b> - 
+    <b>Resource Consumption</b> - abnormal resource consumption can be monitored using <i>Task Manager</i> or <i>top</i> in Linux
+                 resource consumption is a sign to more deeply check a system, not definitive proof
 
-    <b>File System</b> - 
+    <b>File System</b> - aka 'Anomaly Analysis' - checks to see if malware has interacted with filesystem or registry
 
-    <b>Sandbox Execution</b> - 
-
+    <b>Sandbox Execution</b> - used to test suspect code in a more controlled environment; isolated from the host
+                 most sandbox programs record filesystem and registry changes, along with network activity
 <h4>Process Analysis</h4>
+    <b>Abnormal Process Behavior</b> - system deviations that can point to system infections
+        mitgation: be aware of standard system benchmarks 
 
+    Microsoft <b><i>Sysinternals</i></b> is a suite of tools designed to assist in trouble shooting windows issues   
+
+    aside from viewing how a process interacts with the files system; <b><i>Network Activity</i></b> is another reliable way to identify malware.
+    
 <h2>Lesson 05: Summarizing Basic Cryptographic Concepts</h2>
     Objectives: 
     - Compare and contrast cryptographic ciphers
