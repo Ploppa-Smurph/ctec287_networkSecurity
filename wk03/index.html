@@ -288,10 +288,42 @@
        - Asymmetric encryption is NOT used for large files
        - Asymmetric encryption is often used for <b><i>'Key agreement/exchange'</i></b> to share a 'secret symmetric key' for bulk encryption with no one discovering. 
 <h4>Public Key Cryptographic Algorithms</h4>
+    <b>Asymmetric Encryption</b> - aka <i>Public Key Cryptography</i>, 
+        based on <b>RSA Algorithm</b>, aka <i>'Trapdoor function'</i>
 
+    <b>Elliptic Curve Cryptography (ECC)</b> - another type of 'trapdoor function', more secure than RSA
+        a 256-bit ECC encoded ciphtext is roughly equivelant in strength to a 2048-bit RSA 
 <h3>05B: Summarize Cryptographic Modes of Operation</h3>
+     <b>Mode of Operation</b> - means of using a cipher within a product to acheive a security goal (ie: confidentiality, or integrity) 
 <h4>Digital Signatures</h4>
+     <b>digital signature</b> - hashing a public key to confirm the integrity of the sender 
+
+     Process of Creating RSA Digital Signature:  
+       1) Alice (sender) creates a digest/hash, using a pre-agreed hash algorithm, and encrypts the hash using her private key.
+            This creates Alice's digital signature.
+       2) Alice attaches the digital signature and sends both the message and public key to Bob (receiver).
+       3) Bob decrypts the digital signature using Alice's public key, resulting in the digest of the message.
+       4) Bob then creates a digest of the message, using the same pre-agreed hash algorithm Alice used. Bob compares the digests.
+           -- If the 2 digests are the same the data has not been tampered with during transmission 
+           -- If the message had been tampered with, or the sender key had changed, the 2 digests would NOT be the same.
+
+     <b>DSA (Digital Signature Algorithm)</b> - uses ECC (Eliptic Curve Cryptography) rather than RSA
 <h4>Digital Envelopes and Key Exchange</h4>
+     <b>Digital Envelope</b> - the use of both asymmetric encryption to pass a secure secret key to allow the passing of symmetrically encrypted data    
+
+     <b>Key Exchange</b> - method of tranferring cryptographic keys among users enabling the use of a cryptographic algorithm.
+     
+     <b>Key Exchange Steps</b>:
+        1) ALice obtains a copy of Bob's public key.
+        2) Alice encrypts her message using a secret hey cipher, such as AES. 'secret key' is refered to as <i>'Session Key'</i>.
+        3) Alice encrypts the session key with Bob's public key.
+        4) Alice attaches the encrypted session key to the ciphertext message in a digital envelope and sends it to Bob.
+        5) Bob uses his 'private key' to decrypt the 'Session Key'.
+        6) Bob uses the session key to decrypt the ciphertext message. 
+
+    in this process: 
+      - Recipient's 'public key' is used to perform the encryption.
+      - recipient's 'private key' is used for decryption. 
 <h4>Digital Certificates</h4>
 <h4>Perfect Forward Secrecy</h4>
 <h4>Cipher Suites and Modes of Operation</h4>
