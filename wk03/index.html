@@ -268,7 +268,24 @@
     
     ** key-length strength is not comparable between algorigthms; it depends on how strong each algorithm is to brute-force attack **
 <h4>Asymmetric Encryption</h4>
+  CAN be used to prove identity (Authentication)
 
+   <b>Public Key</b> - shared; used for encryption
+
+   <b>Private Key</b> - secure and unique; used for decryption
+
+   ex: 
+    1) Bob generates a key pair and keeps the 'private key' secret. Bob publishes the 'public key'
+    2) Alice wants to send Bob a confidential message. Alice takes a copy of Bob's 'public key'
+    3) Alice uses Bob's 'public key' to encrypt a message. 
+    4) Alice sends Bob the ciphertext.
+    5) Bob receives the message and is able to decrypt using his 'private key'
+    6) If Mallory is snooping, she can obtain a copy of the ciphertext message and the 'public key'. 
+    7) Mallory cannot decrypt the message without the 'private key' and therefore the system remains secure. 
+
+     Asymmetric encryption requires more computer overhead, takes longer, and the encrypted data can only be as large as the 'key size'.
+       - Asymmetric encryption is NOT used for large files
+       - Asymmetric encryption is often used for <b><i>'Key agreement/exchange'</i></b> to share a 'secret symmetric key' for bulk encryption with no one discovering. 
 <h4>Public Key Cryptographic Algorithms</h4>
 
 <h3>05B: Summarize Cryptographic Modes of Operation</h3>
