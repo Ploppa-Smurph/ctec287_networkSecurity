@@ -248,8 +248,18 @@
 
         <b>Key</b> - used to unlock ciphertext     
 <h4>Symmetric Encryption</h4>
-        
+    used for 'Confidentiality'; encryption and decryption are performed by the same 'secret-key'
+     1) Alice and Bob meet and agree which cipher to use and decide on a 'secret-key' value
+           they both record the value of the secret-key
+     2) Alice encrypts a file using the cipher and key
+     3) Alice sends the ciphertext to Bob
+     4) Bob receives the ciphertext and is able to decrypt it applying the known 'secret-key'
+     
+    Symmetric encryption is fast and used for 'bulk encryption' of large data sources
+
+    Symmetric encryption NOT used for authentication or integrity 
 <h4>Stream and Block Ciphers</h4>
+        
 <h4>Asymmetric Encryption</h4>
 <h4>Public Key Cryptographic Algorithms</h4>
 
