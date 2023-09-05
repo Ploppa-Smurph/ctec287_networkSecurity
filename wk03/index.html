@@ -229,6 +229,8 @@
 <h4>Hashing Algorithms</h4>
      - simplest cryptographic operation
      - allows user to tell if a file has been changed / tampered with
+     - used to prove integrity of data, NOT store or transmit data
+
       <b>Cryptographic Hashing Algorithm</b> - adds information to plaintext to increase the plaintext length and make it harder to guess
            aka: checksum, hash, message digest 
            
@@ -237,7 +239,16 @@
 
       <b>Message Digest Algorithm #5 (MD5)</b> - produces a 128-bit digest, still used in some security products 
 <h4>Encryption Ciphers and Keys</h4>
+     <b>Substitution and Transposition Ciphers</b>    
+        <b>Substitution Cipher</b> - involves replacing units (letter or block of letters) in the plaintext with a different ciphertext
+                ex: <i>ROT13</i> (a Caesar Cipher) rotates each letter 13 places ('A' becomes 'N')
+
+        <b>Transpoition Cipher</b> - units stay the same in plaintext or ciphertext, their position changes
+                ex: <i>Rail Fence Cipher</i> -- letters are written in rows and then the columns are concatenated to reveal the answer
+
+        <b>Key</b> - used to unlock ciphertext     
 <h4>Symmetric Encryption</h4>
+        
 <h4>Stream and Block Ciphers</h4>
 <h4>Asymmetric Encryption</h4>
 <h4>Public Key Cryptographic Algorithms</h4>
