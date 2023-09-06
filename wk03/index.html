@@ -329,14 +329,84 @@
 
       <b>Public Key Infrastructure</b> - the process of issuing and verifying certificates
 <h4>Perfect Forward Secrecy</h4>
-     <b>PFS Perfect Forward Secrecy</b>
+    <b>PFS Perfect Forward Secrecy</b> - mitigate risk of RSA key exchange
+        PFS uses <i>DH (Diffie-Hellman)</i> key agreement to create ephemeral <i>'Session keys'</i> without using the server's private key 
 
+     DHE/EDH (Diffie-Hellman Ephemeral mode)
+     (ECDHE) Elliptic Curve Diffie-Hellman Ephemeral mode         
 <h4>Cipher Suites and Modes of Operation</h4>
-<h4>Authenticates Modes of Operation</h4>
+      - Signature algorithm - 
 
+      - Key Exchange / Agreement Algorithm - 
+
+       AES
+       
+       Cipher Block Chaining (CBC) mode - applies initialization vector (IV)
+            - cipher is created from plain text block with IV, that cipher is added to the next block and so on down the line 
+            - XOR operations add the output of the 1st ciphertext block to the  next plaintext block and repeated through the full 'chain'
+               this ensures that no plaintext block produces the same ciphertext.  
+
+           ** CBC needs padding to ensure data in block is an exact multiple of the block size
+           
+           *** CBC suffers from the <b>'padding attack'</b> ***
+
+       XOR - logical operation that outputs '1 / True' when one input is True and the other input is False
+
+       Counter Mode (CTM) - AES algorithm works as stream cipher. 
+           - Counter Mode applies IV (initialization vector) along with an 'incrementing counter value' to generate keystream
+           - keystream is then XOR'ed to data in plaintext blocks.
+           - each block can be processed individually, or in parallel, greatly improving performance 
+           ** CTM does NOT need padding 
+<h4>Authenticates Modes of Operation</h4>
+      symettric algorithms do NOT provide message integrity or authentication. 
+      CBC and Counter Modes of operation are unauthenticated and are vulnerable to data being inserted or modified 
+      
+      <b>Chosen Ciphertext Attack</b> - modifying or inserting data into the symmetric algorithm to break the encryption scheme 
+
+    <b>Authenticated Encryption</b> - provides authentication and integrity by hashing message output and shared secret key. 
+             authentication encryption scheme is specified by it's separate function: ex: AES CBC with HMAC-SHA
+             ** AES CBC authentication is vulnerable to a cryptographic <i>'padding oracle attack'</i>.   
+
+    <b>Authenticated Encryption with Additional Data (AEAD)</b> - 
+            Stream cipher / counter modes are strongly preferred (because of the 'Padding attack' on CBC)
+            
+        Stream ciphers use <i>'Authenticated Encryption with Additional Data'</i> - the receiver uses the message header to ensure payload has not been replayed from a different location.
+
+        AEAD mode is identified by a single hyphenated function name (ex: AES-GCM or AES-CCM)
+
+        - ChaCha20-Poly1305 is an alternative stream cipher to AES
 <h3>05C: Summarize Cryptographic Use Cases and Weakness</h3>
 <h4>Cryptography Supporting Authentication and Non-Repudiation</h4>
+      <b>Cryptographic Primitive</b> - hash, symmetric cipher, and asymmetric cipher 
+
+      multiple cryptographic primitives are used in more complex 'cryptographic system' 
+
+      ** Encryption can form the basis of Identification, Authentication, and Access Control Systems
+
+      Non-repudiation -- concept that sender cannot deny sending a message
+      
+      to support Authentication and Non-repudiation recipients can <b>decrypt</b>, but NOT encrypt.
+         (use case is similare to aymmetric encryption cipher and public/private key pairs)
+
+      <b>User/Server</b> generates linked keys -> <i>Private Key</i> is stored securely and protected
+         ** imparitive only User/Server be able to use the private key. 
+        the <i>Public Key</i> is given to clients usually in the form of a digitat certificate 
 <h4>Cryptography Supporting Confidentiality</h4>
+       if ciphertext is intercepted by a threat actor they will not be able to change what has been stolen.
+
+    Cryptography supports confidentiallity 
+
+    RSA (Asymmetric) encryption is too slow to encrypt an entire disk or large file. 
+    AES (Symmetric) is fast enough that it can encrypt and decrypt streaming data more quickly 
+        but it is difficult to distribute the private key securely. 
+
+    that is why both Asymmetric (RSA) and Symmetric (AES) encryption are used -- encrypt the key Asymmetrically and the data symmetrically
+
+    - File Encryption (data-at-rest) - private key is written to TPM (Trusted Platform Module) and is only available when user is 'authenticated'
+
+    - Transport Encryption (data-in-transit) - uses 'digital envelopes' or 'perfect forward secrecy'
+       ex: HTTPS - the web server is allocated a key pair and stores the private key. the 'Public Key' is distributed via <b><i>Digital Certificate</i></b> 
+             The client and server agree on 1 or more AES cipher keys to use as 'session keys'
 <h4>Cryptography Supporting Integrity and Resiliency</h4>
 <h4>Cryptographic Performance Limitations</h4>
 <h4>Cryptographic Security Limitations</h4>
