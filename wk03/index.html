@@ -470,17 +470,34 @@
        2) attacker then removes signature from benign document and add it to the malicious document, forging the target's signature            
 <h3>05D: Summarize Other Cryptographic Thechnologies</h3>
 <h4>Quantum and Post-Quantum</h4>
-     <b>Computing</b> - 
+     <b>Computing</b> - quibits are set to 0, 1, or to a 'superposition' state where there is a probability that the quibit is either 1 or 0.
+         <b><i>Quibits</i></b> can be entagled; when the value of the quibit it collapses to 0 or 1; and all entangled quibits collapse at the same time with the same value
 
-     <b>Communications</b> - 
+         typical computers go through Read -> Execute -> Write cycle for each bit in memory; quantum computing is exponentially faster
 
-     <b>Post-Quantum</b> - 
+     <b>Communications</b> - properties of entanglement, superposition, and collapse support 'tamper-evident' communications systems
 
-     <b>Lightweight Cryptography</b> - 
+     <b>Post-Quantum</b> - expected state of computing after quantum computers are practical
+
+     <b>Lightweight Cryptography</b> - NIST is developing a minimal CPU and Memory intensice cipher suite for low-power devices that is also quantum resistent. 
 <h4>Homomorphic Encryption</h4>
+     <b>Homomorphic Encryption</b> is principally used to share privacy-sensitive data sets. 
+         allows organization to have 3rd party perform analysis on data, without exposing identifying information such as username, email address, login information, etc... ever being decrytped.
 <h4>Blockchain</h4>
+     Blockchain is the concept of keeping an expanding list of 'transactional records' secure using cryptography. 
+     - Each record of the chain is called a 'block' and is run through a hash function.
+     - Hash values of the previous block are added to the hash calculation of the next block; each block validates the hash of the previous block.
+     
+     blockchains are recorded in a public ledger, which is decentralized and shared p2p (peer-to-peer) to mitigate the risk of a single point of compromise.
 <h4>Steganography</h4>
+     Steganography means 'Secret Writing' - and is a technique for obscuring the presence of a message. 
+       <b><i>covertext</i></b> - container for a file that is hidden; ex: text hidden in a picture file
 
+    <b>Steganography Tools</b> - detect presence of hidden messages in covertext
+
+    has been used to encode messages in TCP packet data to create a covert message channel.
+
+    these methods might be used for command and control 
 </pre>
 </body>
 </html>
