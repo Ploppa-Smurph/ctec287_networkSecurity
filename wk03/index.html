@@ -419,19 +419,35 @@
          ex: obfuscated code = hard to read and tell what is happening, but the computer compiles it fine
 <h4>Cryptographic Performance Limitations</h4>
     Main Perfomance Factors: 
-      - <b>Speed</b> - 
+      - <b>Speed</b> - data / second processed; mostly impacts large amounts of data 
 
-      - <b>Time/Latency</b> - 
+      - <b>Time/Latency</b> - time required to obtain results
 
-      - <b>Size</b> - 
+      - <b>Size</b> - security of cipher is related to size of key, longer keys provide better security
+              ** 'key size' security CANNOT be compared between algorithms (ex: 256-bit ECC key > 2048-bit RSA key)
+               -- larger keys increase computational overhead, reduce speed, and increase latency       
 
-      - <b>Computational Overhead</b> - 
+      - <b>Computational Overhead</b> - amount of CPU and memory resources need for the cipher
 
     Particular Case Uses:
-      - <b>Low Power Devices</b> - 
+      - <b>Low Power Devices</b> - changes have to be made for low power battery operated devices and items like 'smart card readers'
 
-      - <b>Low Latency Uses</b> - 
+      - <b>Low Latency Uses</b> - reduce 'handshake' time to reduce 'timeout' issues. 
 <h4>Cryptographic Security Limitations</h4>
+     <b>Entropy</b> - measure of disorder
+    
+     plaintext shows least amount of entropy, it is normally written to be easy to read.
+
+     cryptographic algorithms = need to make disordered ciphertext in order to be strong
+
+    Predeictability and Reuse: 
+     <b>Nonce</b> - 
+     
+     <b>Initialization Vector</b> - 
+
+     <b>Salt</b> - 
+
+     
 <h4>Longevity and Cryptograhic Attacks</h4>
 <h4>Man-in-the-Middle / Advesary-in-the-Middle and Downgrade Attacks</h4>
 <h4>Salting and Key Stretching</h4>
