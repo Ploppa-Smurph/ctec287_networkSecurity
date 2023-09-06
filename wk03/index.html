@@ -441,16 +441,25 @@
      cryptographic algorithms = need to make disordered ciphertext in order to be strong
 
     Predeictability and Reuse: 
-     <b>Nonce</b> - 
-     
-     <b>Initialization Vector</b> - 
+     <b>Predictability</b> - weakness; causes low entropy and is a vulnerability
 
-     <b>Salt</b> - 
-
+     <b>Nonce</b> - "Number once used" -- pseudo-random value
      
+     <b>Initialization Vector</b> - either random or pseudo-random
+
+     <b>Salt</b> - random / pseudo-random number or string; specifically used with hasing password values
 <h4>Longevity and Cryptograhic Attacks</h4>
+     <b>Longevity</b> - measure of confidence given to a particular cipher
+        ex: RC4, DES/3DES are all deprecated; RSA is reaching end of life
+
+     longevity can also refer to how long data must be kept securely
 <h4>Man-in-the-Middle / Advesary-in-the-Middle and Downgrade Attacks</h4>
+     <b>Downgrade attack</b> - facilitates Adversary-in-the-Middle attack by requesting the server lower specification protocol with weaker ciphers and key length     
 <h4>Salting and Key Stretching</h4>
+    <b>Salting</b> - added bit to password hash; helps prevent brute force attacks
+    
+    <b>Key Stretching</b> - takes key generated from password and converts it to a longer more random key. 
+         ex: <b>PBKDF2 Password-Based Key Derivation Function 2</b> part of Wi-Fi Protected Access (WPA)
 <h4>Collision and Birthday Attack</h4>
 
 <h3>05D: Summarize Other Cryptographic Thechnologies</h3>
