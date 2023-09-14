@@ -20,32 +20,35 @@
 
         If a key is not backed up, it represents a single point of failure. Key recovery is a process for backing up keys and/or recovering data encrypted with a lost key.</i>
    
-   <b>03) </b>
-       <i></i>
+   <b>03) An employee has requested a digital certificate for a user to access the Virtual Private Network (VPN). It is discovered that the certificate is also being used for digitally signing emails. 
+           Evaluate the possible extension attributes to determine which should be modified so that the certificate only works for VPN access.</b>
+       <i>Set the Extended Key Usage (EKU) field of a certificate to define its usage. Applications such as virtual private network (VPN) or email clients may require specific requirements for key usage configuration.</i>
    
-   <b>04) </b>
-       <i></i>
+   <b>04) An employee handles key management and has learned that a user has used the same key pair for encrypting documents and digitally signing emails. Prioritize all actions that should be taken and determine the first action that the employee should take.</b>
+       <i>The first step is to recover any data encrypted with the key so the data can be decrypted. Once the data is recovered, the key can be revoked and an administrator can issue a new key pair.</i>
    
-   <b>05) </b>
-       <i></i>
+   <b>05) A company has a critical encryption key that has an M-of-N control configuration for protection. Examine the examples and select the one that correctly illustrates the proper configuration for this type of protection of critical encryption keys.</b>
+       <i>A correct configuration for an M-of-N control is M=3 and N=5. M stands for the number of authorized administrators that must be present to access the critical encryption keys and N is the total number of authorized administrators. In this scenario, 3 of the 5 administrators must be present for access.</i>
    
-   <b>06) </b>
-       <i></i>
+   <b>06) Consider the life cycle of an encryption key. Which of the following is NOT a stage in a key's life cycle?</b>
+       <i>Verification is not a stage in a key’s life cycle. It is part of the software development life cycle. 
+        The stages are: key generation, certificate generation, storage, revocation, and expiration and renewal.</i>
    
-   <b>07) </b>
-       <i></i>
+   <b>07) Digital certificates are based on the X.509 standard that defines the fields (or information) about a subject (or entity using the certificate) and the certificate’s issuer. Which of the following fields would not be included in a standard public certificate?</b>
+       <i>An endorsement key is not required for a digital certificate. It is part of a Trusted Platform Module (TPM) and used to create subkeys for key storage, signature, and encryption operations.</i>
    
-   <b>08) </b>
-       <i></i>
+   <b>08) A website with many subdomains has been issued a web server certificate for domain validation. This certificate verifies the parent domain and all subdomains (to a single level). This certificate is also known as which of the following?</b>
+       <i>A wildcard certificate with a field entry of a wildcard domain such as *.comptia.org, means that the certificate issued to the parent domain will be accepted as valid for all subdomains (to a single level).</i>
 
-   <b>09) </b>    
-       <i></i> 
+   <b>09) An employee handling key management discovers that a private key has been compromised. Evaluate the stages of a key's life cycle and determine which stage the employee initiates upon learning of the compromise.</b>    
+       <i>Upon learning of a compromise, the current key should be revoked, and a new key can then be generated.</i> 
 
-   <b>10) </b>    
-       <i></i> 
+   <b>10) A Certificate Revocation List (CRL) has a publish period set to 24 hours. Based on the normal procedures for a CRL, what is the most applicable validity period for this certificate?</b>    
+       <i>One or two hours over the publish period is considered normal thus making 26 hours within the window.</i> 
 
-   <b>11) </b>    
-       <i></i> 
+   <b>11) A web administrator visits a website after installing its certificate to test the SSL binding. The administrator's client computer did not trust the website's certificate. The administrator views the website's certificate from the browser to determine which certificate authority (CA) generated the certificate. 
+          Which certificate field would assist with the troubleshooting process?</b>    
+       <i>The Issuer field provides the name of the certificate authority (CA) that generated and issued the certificate for the web server.</i> 
 
 
 <h3>Lab 07: Managing Life Cycle of a Certificate</h3>
