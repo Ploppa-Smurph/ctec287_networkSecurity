@@ -67,23 +67,63 @@
     <b>05) Biometric authentication methods have different error rates, with some methods being easier to fool than others. An unauthorized user is unlikely to fool which of the following methods?</b> 
         <i>Biometric authentication based on a retinal scan is the hardest method to fool. Retinal scanning is used to identify the patterns of blood vessels with the eye, whereas an iris scan only uses the surface of the eye.</i>     
     
-    <b>06) </b> 
-        <i></i>     
+    <b>06) A user presents a smart card to gain access to a building. Authentication is handled through integration to a Windows server that's acting as a certificate authority on the network. Review the security processes and conclude which are valid when using Kerberos authentication. (Select all that apply.)</b> 
+        <i>Inputting a correct PIN authorizes the smart card's cryptoprocessor to use its private key to create a Ticket Granting Ticket (TGT) request to an Authentication Server (AS).
+
+            The AS can place trust when the user's certificate is issued by a local or third-party root certification authority.</i>     
     
-    <b>07) </b> 
-        <i></i>     
+    <b>07) Select the explanations that accurately describe the Ticket Granting Ticket (TGT) role within the Authentication Service (AS). (Select all that apply.)</b> 
+        <i>The AS issues a TGT to the client after successful authentication, and it contains information about the client, including their name and IP address, along with a timestamp and validity period. The TGT is encrypted with the secret key of the Authentication Server (AS) to ensure its confidentiality and integrity during transmission and storage.
+ 
+            The TGS issues service tickets to the client, and these tickets contain a session key that is shared between the client and the requested service. The TGT does not contain any service session key for use between the client and the application server.</i>     
     
-    <b>08) </b> 
-        <i></i>     
+    <b>08) A company receives a massive flood of requests which overloads the company's intranet and services. What type of attack is the company experiencing at this time?</b> 
+        <i>Clogging a company's pipe in and out of the network would be considered a Denial of Service (DoS) attack. The attacker can do this various ways, one example is to keep trying to connect to a device that is externally facing. A company can throttle connections to mitigate DoS attacks. </i>     
     
-    <b>09) </b> 
-        <i></i>     
+    <b>09) Analyze the features of behavioral technologies for authentication, and choose the statements that accurately depict this type of biometric authentication. (Select all that apply.)</b> 
+        <i>Behavioral technologies are sometimes classified as "something you do." These technologies often have a lower cost to implement than other types of biometric cryptosystems, but they have a higher error rate.
+
+            Typing is used as a behavioral technology, and the template is based on the speed and pattern of a user's input of a passphrase.</i>     
     
-    <b>10) </b> 
-        <i></i>     
+    <b>10) Consider biometric methods that are used to authenticate a user. Knowing that errors are possible, which of the following would most likely result in a security breach?</b> 
+        <i>Regarding biometric authentication, a false positive is where an unauthorized person is accepted, leading to possible security breaches. This is the False Acceptance Rate (FAR).</i>     
     
-    <b>11) </b> 
-        <i></i>     
+    <b>11) A security team has just added iris scanners to two access control points in a secure facility. They are in the process of making adjustments to ensure authorized users have access, while unauthorized users cannot get through.
+            Analyze the scenario and determine what metric the team is in the process of fine-tuning.</b> 
+        <i>The process of fine-tuning a biometric system involves adjusting the crossover error rate, the point at which the false rejection rate and false acceptance rate meet.</i>     
+    
+    <b>12) Both Remote Access Dial-In User Service (RADIUS) and Terminal Access Controller Access-Control System (TACACS+) provide authentication, authorization, and accounting using a separate server (the AAA server). Based on the protocols' authentication processes, select the true statements. (Select the best three choices.)</b> 
+        <i>RADIUS uses UDP by default over ports 1812 and 1813 and TACACS+ uses TCP on port 49.
+
+
+            TACACS+ encrypts the whole packet (except the header, which identifies the packet as TACACS+ data) and RADIUS only encrypts the password portion of the packet using MD5.
+            
+            
+            RADIUS is primarily used for network access for a remote user and TACACS+ is primarily used for device administration. TACACS+ provides centralized control for administrators to manage routers, switches, and firewall appliances, as well as user privileges.</i>     
+    
+    <b>13) Based on the known facts of password attacks, critique the susceptibility of the password "DogHouse23" to an attack.</b> 
+        <i>The password does not contain special characters, and also contains words that are found in the dictionary. Both of these attributes make the password vulnerable.</i>     
+    
+    <b>14) When a network uses Extensible Authentication Protocol (EAP) as the authentication method, what access control standard restricts local traffic to authentication data when a client connects over a Virtual Private Network (VPN) gateway?</b> 
+        <i>The IEEE 802.1X Port-based Network Access Control (NAC) standard provides the means of using an EAP method when a device connects to a VPN gateway. With 802.1X, the network access server (NAS) device accepting remote connections does not have to store any authentication credentials. The network access 
+            server forwards only EAP authentication data between the authentication server (implemented by TACACS+ or RADIUS) and the supplicant requesting remote access. Full network access is only granted once the supplicant has been authenticated.</i>     
+    
+    <b>15) Analyze the types of password cracker attacks to determine which scenario best describes a brute force attack.</b> 
+        <i>A brute force attack attempts every possible combination in the key space in order to derive a plaintext password from a hash. The key space is determined by the number of bits used.</i>     
+    
+    <b>16) Based on knowledge of the fundamentals of One-time Passwords (OTP), which of the following choices represents the problem that exists with HMAC-based One-time Password Algorithm (HOTP) and is addressed by Time-based One-time Password Algorithm (TOTP)?</b> 
+        <i>Tokens can persist unexpired in HOTP, increasing the risk of an attacker obtaining one and decrypting data in the future. TOTP addresses this by adding a value to the shared secret derived from the device’s and server’s local timestamp. TOTP automatically expires each token after a short window of time.</i>     
+    
+    <b>17) An Identity and Access Management (IAM) system has four main processes. Which of the following is NOT one of the main processes?</b> 
+        <i>Integrity is the fundamental security goal of keeping organizational information accurate, free of errors, and without unauthorized modifications. However, it is not part of the IAM system. IAM defines the attributes that comprise an entity's identity. The four processes include Authorization, Accounting, Identification, and Authentication.</i>     
+    
+    <b>18) Evaluate the following controls that have been set by a system administrator for an online retailer. Determine which statement demonstrates the identification control within the Identity and Access Management (IAM) system.</b> 
+        <i>Identification controls are set to ensure that customers are legitimate. An example is to ensure that billing and primary delivery addresses are real and valid.</i>     
+    
+    <b>19) Which of the following password cracker attacks are combined to create a typical hybrid password attack? (Select all that apply.)</b> 
+        <i>A typical hybrid password attack uses a combination of dictionary and brute force attacks.
+
+            A dictionary attack is a type of password attack that compares encrypted passwords against a predetermined list of possible password values. A brute force attack attempts every possible combination in the key space in order to derive a plaintext password from a hash.</i>     
 
 <h3>Lab 07: Managing Life Cycle of a Certificate</h3>
 Scenario: In this activity, you will explore the properties of different kinds of digital certificates and use Windows to request, issue, and revoke certificates.
