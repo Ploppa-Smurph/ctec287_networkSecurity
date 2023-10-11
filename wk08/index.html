@@ -12,53 +12,84 @@
 <h2>Lesson 13 - Implementing Secure Mobile Solutions</h2>
 <h2>Lesson Reviews</h2>
 <h3>Lesson 12 - Implementing Host Security Solutions</h3>
-<b>01) </b>
-    <i></i>
+<b>01) Compare the features of static and dynamic computing environments and then select the accurate statements. (Select all that apply.)</b>
+    <i>An embedded computing environment is a complete computer system that is designed to perform a specific, dedicated function. A PC is a dynamic computing environment where the user can add or remove programs and data files.
 
-<b>02) </b>
-    <i></i>
+        A dynamic computing environment provides users more control to perform actions like install or update applications. A static computing environment update will usually only be available through specific management interfaces.
+        
+        A static computing environment gives less control than a dynamic computing environment. Each embedded system may differ in how each one is handled or maintained, and therefore may require more manual tasks than dynamic systems.
+        
+        A static computing environment is easier to protect. This is due to the unchanging environment without adding new hardware or software. With fewer changes and additions, the systems are not introduced to as many threats.</i>
+
+<b>02) Compare and evaluate the various levels and types of platform security to conclude which option applies to a hardware Trusted Platform Module (TPM).</b>
+    <i>A Trusted Platform Module (TPM) is a specification for hardware-based storage of digital certificates, keys, hashed passwords, and other user and platform identification information.
+
+        TPM is not a specification for a suite of high-level communication protocols used for network communication.</i>
     
-<b>03) </b>
-    <i></i>
+<b>03) A company security manager takes steps to increase security on Internet of Things (IoT) devices and embedded systems throughout a company’s network and office spaces. What measures can the security manager use to implement secure configurations for these systems? (Select all that apply.)</b>
+    <i>Some embedded systems use legacy OSes, making them difficult to secure. Isolating these hosts from others through network segmentation and using endpoint security can help secure them against exploitation.
 
-<b>04) </b>
-    <i></i>
+        One way of increasing the security of data in transit for embedded systems is through the use of wrappers, such as IPSec, which secures data through authentication and encryption.</i>
 
-<b>05) </b>
-    <i></i>
+<b>04) Select the options that can be configured by Group Policy Objects (GPOs). (Select all that apply.)</b>
+    <i>On a Windows Active Directory network, access policies can be configured via group policy objects (GPOs). GPOs can be used to configure access rights for user/group/role accounts.
 
-<b>06) </b>
-    <i></i>
+        GPOs can configure registry settings across a range of computers.</i>
+
+<b>05) Evaluate approaches to applying patch management updates to select the accurate statement.</b>
+    <i>It is well recognized that Operating System major release updates can cause problems with software application compatibility.</i>
+
+<b>06) It is well recognized that Operating System major release updates can cause problems with software application compatibility.</b>
+    <i>A hardware RoT, or trust anchor, is a secure subsystem that can provide attestation. When a computer joins a network, it may submit a report to the NAC declaring valid OS files. The RoT scans the boot metrics and OS files to verify their signatures.</i>
     
-<b>07) </b>
-    <i></i>
+<b>07) A system administrator is deploying a new web server. Which hardening procedures should the administrator consider? (Select all that apply.)</b>
+    <i>Secure file transfer protocol (SFTP) safely transfers files remotely via SSH.
 
-<b>08) </b>
-    <i></i>    
+        Transport layer security (TLS) enables secure communication between the client and the web server. This is implemented by assigning a certificate to the web server. TLS 1.3 prevents downgrade attacks.</i>
 
-<b>09) </b>
-    <i></i>
+<b>08) You are asked to help design a security system. What are some methods that can be used to mitigate risks to embedded systems in security environments? (Select all that apply.)</b>
+    <i>Firmware patching for embedded systems is just as vital as keeping host OS software up to date on a traditional computer. 
 
-<b>10) </b>
-    <i></i>
+        Network segmentation is one of the core principles of network security. This control network should be separated from the corporate network using firewalls and VLANs.
+        
+        One way of increasing the security of data in transit for embedded systems is through the use of wrappers, such as IPSec. The only thing visible to an attacker or anyone sniffing the wire is the IPSec header, which describes only the tunnel endpoints. </i>    
+
+<b>09) A system administrator has received new systems to deploy within a work center. Which of the following should the system administrator implement to ensure proper hardening without impacting functionality? (Select all that apply.)</b>
+    <i>Interfaces provide a connection to the network and some machines may have more than one interface. If any of these interfaces are not required they should be explicitly disabled rather than left unused.
+
+        Services provide a library of functions for different types of applications. Unused services should be disabled.</i>
+
+<b>10) A network manager is installing a new switch on the network. What is the most comprehensive step the manager can take to harden network security after installation?</b>
+    <i>Ensuring that all security patches are applied and that the switch is properly configured is the most comprehensive step to harden network security after installation. This includes taking measures such as updating the firmware, changing default credentials, disabling unused services, and implementing other security practices recommended by the manufacturer.</i>
     
-<b>11) </b>
+<b>11) Examine the differences between general purpose personal computer hosts and embedded systems and select the true statements regarding embedded system constraints. (Select all that apply.)</b>
     <i></i>
 
-<b>12) </b>
-    <i></i>
+<b>12) Examine the differences between general purpose personal computer hosts and embedded systems and select the true statements regarding embedded system constraints. (Select all that apply.)</b>
+    <i>Many embedded devices are battery-powered and may need to run for years without having to replace the cells. Processing must be kept to the minimum possible level.
 
-<b>13) </b>
-    <i></i>
+        Embedded systems often use system on chip (SoC), a design where processors, controllers, and devices reside on a single processor die (or chip). This packaging saves space and is usually power efficient.</i>
 
-<b>14) </b>
-    <i></i>
+<b>13) During a training event, an executive at a large company asks the security manager trainer why pushing automatic updates as a patch management solution is not ideal for their Enterprise network. How will the security manager most likely respond?</b>
+    <i>Enterprise networks need to be cautious about automated deployment, as a patch that is incompatible with an application or workflow can cause availability issues. If multiple applications run update clients on the same host, performance issues may also arise.</i>
+
+<b>14) Given knowledge of secure firmware implementation, select the statement that describes the difference between secure boot and measured boot.</b>
+    <i>Secure boot is about provisioning certificates for trusted operating systems and blocking unauthorized OSes. Measured boot stores and compares hashes of critical boot files to detect unauthorized processes.
+
+        Secure boot requires UEFI but does not require a TPM. A trusted or measured boot process uses platform configuration registers (PCRs) in the TPM at each stage in the boot process to check whether hashes of key system state data have changed.</i>
     
-<b>15) </b>
-    <i></i>
+<b>15) Contrast vendor support for products and services at the end of their life cycle. Which of the following statements describes the difference between support available during the end of life (EOL) phase and end of service life (EOSL) phase?</b>
+    <i>When a manufacturer discontinues a product’s sales, it enters an end of life (EOL) phase in which support and availability of spares and updates grow limited. An end of service life (EOSL) system is one whose developer or vendor no longer supports.</i>
 
-<b>16) </b>
-    <i></i>
+<b>16) Analyze the features of a Full Disk Encryption (FDE) to select the statements that accurately reflect this type of security. (Select all that apply.)</b>
+    <i>FDE means that the entire contents of the drive, including system files and folders, are encrypted. The cryptographic operations performed by the OS reduces performance.
+
+        FDE normally utilizes a Trusted Platform Module (TPM) to secure the storage of the key used to encrypt the drive contents.</i>
+
+<b>17) Evaluate the threats and vulnerabilities regarding medical devices and then select accurate statements. (Select all that apply.)</b>
+    <i>Attackers may have a goal of injuring or killing patients by tampering with dosage levels or device settings.
+
+        Many of the control systems for medical devices run on unsupported versions of operating systems, such as Windows XP, because the costs of updating the software to work with newer OS versions is high and disruptive to patient services.</i>        
         
 <h3>Lesson 13 - Implementing Secure Mobile Solutions</h3>
 <h2>Labs & Sims</h2>
