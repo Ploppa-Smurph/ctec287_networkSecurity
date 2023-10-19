@@ -9,47 +9,48 @@
 <pre>
 <h1>CTEC 287 wk 09 - Lesson 14: Summarizing Secure Application Concept</h1>
 <h2>Lesson 14: Summarizing Secure Application Concept</h2>
-<b>01) </b>
-    <i></i>
+<b>01) A system administrator suspects a memory leak is occurring on a client. Determine which scenario would justify this finding.</b>
+    <i>Software does not release allocated memory when it is done with it.</i>
 
-<b>02) </b>    
-    <i></i>
+<b>02) A threat analyst is asked about malicious code indicators. Which indicator allows the threat actor's backdoor to restart if the host reboots or the user logs off?</b>    
+    <i>Persistence - Persistence is when a mechanism allows the threat actor's backdoor to restart if the host reboots or the user logs off. Typical methods are to use AutoRun keys in the registry or adding a scheduled task.</i>
 
-<b>03) </b>
-    <i></i>
+<b>03) An attacker finds a way to exploit a vulnerability in a target application that allows the attacker to bypass a password requirement. Which method did the attacker most likely use?</b>
+    <i>An attacker could exploit the vulnerability with an LDAP injection attack, inserting the (&) operator to return a condition that is always true, dropping the password filter for a name=value pair.</i>
     
-<b>04) </b>
-    <i></i>    
+<b>04) Which of the following is a common solution that protects an application from behaving in an unexpected way when passing invalid data through an attack?</b>
+    <i>Input validation is a primary vector for attacking applications. If the application cannot check for valid inputs, a hacker can take advantage of this vulnerability to enter in commands that can query a database, for example, and obtain confidential data.</i>    
 
-<b>05) </b>
-    <i></i>
+<b>05) Code developers de-conflict coding with one another during which phase of the software development life cycle (SDLC)?</b>
+    <i>Continuous integration (CI) is the principle that developers should commit and test updates often. CI aims to detect and resolve coding conflicts early.</i>
 
-<b>06) </b>
-    <i></i>
+<b>06) Which malicious code indicator is a minimal program designed to exploit a buffer overflow?</b>
+    <i>Shellcode is a minimal program designed to exploit a buffer overflow or similar vulnerability to gain privileges, or to drop a backdoor on the host if run as a Trojan.</i>
 
-<b>07) </b>    
-    <i></i>
+<b>07) Which type of attack disguises the nature of malicious input, preventing normalization from stripping illegal characters?</b>    
+    <i>The threat actor might use a canonicalization attack to disguise the nature of the malicious input. Canonicalization refers to the way the server converts between the different methods by which a resource (such as a file path or URL) may be represented and 
+        submitted to the simplest (or canonical) method used by the server to process the input.</i>
 
-<b>08) </b>
-    <i></i>
+<b>08) Identify the type of attack that occurs when the outcome from execution process are directly dependent on the order and timing of certain events, and those events fail to execute in the order and timing intended by the developer.</b>
+    <i>Race conditions occur when the outcome from executive processes is directly dependent on the order and timing of certain events, and those events fail to execute in the order and timing intended by the developer.</i>
 
-<b>09) </b>    
-    <i></i>
+<b>09) A system administrator is working to restore a system affected by a stack overflow. Analyze the given choices and determine which overflow vulnerability the attacker exploited.</b>    
+    <i>A stack is an area of memory used by a program subroutine. It includes a return address, which is the location of the program that is called the subroutine. An attacker could use a buffer overflow to change the return address, which is called a stack overflow.</i>
 
-<b>10) </b>
-    <i></i>
+<b>10) Which of the following is NOT a scripting language?</b>
+    <i>Automated or procedural scripting languages take standard arguments as data, so there is less scope for uncertainty over configuration choices leading to errors. A domain-specific language (DSL) performs a particular task, such as regex string parsing.</i>
     
-<b>11) </b>
-    <i></i>    
+<b>11) Analyze the following statements and select the statement which correctly explains the difference between cross-site scripting (XSS) and cross-site request forgery (XSRF).</b>
+    <i>A client-side or cross-site request forgery (CSRF or XSRF) can exploit applications that use cookies to authenticate users and track sessions. XSS exploits a browser’s trust and can perform an XSRF attack.</i>    
 
-<b>12) </b>
-    <i></i>
+<b>12) Which method might an attacker use to redirect login attempts via information gained by implementing JavaScript on a webpage the user believes is legitimate?</b>
+    <i>Clickjacking is an attack characterized as a difference between what a user sees and trusts as a web application with a login page or form, and the reality of the page or form containing a malicious layer or invisible iFrame, allowing an attacker to intercept or redirect user input.</i>
 
-<b>13) </b>
-    <i></i>
+<b>13) Analyze types of vulnerabilities and summarize a zero-day exploit.</b>
+    <i>A zero-day exploit is a vulnerability that is exploited before the developer knows about it or can release a patch to address it. These can be extremely destructive as it can take the vendor a lot of time to develop a patch.</i>
 
-<b>14) </b>    
-    <i></i>
+<b>14) A security analyst is assessing the security of their company’s web application. They have determined multiple occurrences of XSS attacks and need to identify what type of XSS attacks occurred in order to apply the proper remediation. Which of the following accurately distinguishes between Reflected XSS, Stored XSS, and DOM XSS attacks?</b>    
+    <i>There are three types of XSS attacks – Reflected XSS attacks exploit server-side scripts by capturing user input and reflecting it back to the client, Stored XSS attacks exploit vulnerabilities in server-side scripts by storing malicious code in a database, and DOM XSS attacks exploit vulnerabilities in client-side scripts by manipulating the Document Object Model (DOM).</i>
 
 <b>15) </b>    
     <i></i>
