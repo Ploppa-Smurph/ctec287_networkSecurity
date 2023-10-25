@@ -137,6 +137,11 @@
        users            = client (group, user); subscription (none, private); customer (internal, subscription)
        post security    = root; user account; (develop, external, programmatic, user)      
 <h3>Sim 16A - Explain Privacy and Data Sensitivity</h3>
+       catalog database = public; sale (finance, IT, operations); IT (finance, Sales, operations); none (finance, IT, operations, sales); no org role
+       sales database   = private (pub & priv, ); sales; IT (sales); none (IT, operation, finance, sales); no org role
+       employee data    = private; human resources; IT (finance, hr); hr; org role 
+       inventory data   = public & private (private, sales); operations (finance, sales); IT (finance, sales); none (finance, IT, operations); no org role 
+
 </pre>    
 </body>
 </html>
