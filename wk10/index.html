@@ -77,36 +77,58 @@
 
             Representational State Transfer (REST) is a looser architectural framework, also referred to as RESTful APIs. SOAP is a tightly specified protocol.</i>
 <h3>Lesson 16: Explain Privacy and Data Protection Concepts</h3>
-    <b>01) </b>
-        <i> </i>
+    <b>01) Analyze and determine the role responsible for managing the system where data assets are stored, and is responsible for enforcing access control, encryption, and backup measures.</b>
+        <i>Data Custodian - A data custodian is responsible for managing the system where data assets are stored, including responsibility for enforcing access control, encryption, and backup or recovery measures.</i>
         
-    <b>02) </b>
-        <i> </i>
+    <b>02) Data exists in several states, each requiring different security considerations. Evaluate the following items and select which data state presents the greatest risk due to decryption.</b>
+        <i>Data in use -  Data in use is when data is present in volatile memory. When a user works with data, that data needs to be decrypted, which puts it at risk.</i>
       
-    <b>03) </b>
-        <i> </i>
+    <b>03) A document contains information about a company that is too valuable to permit any risks, and viewing is severely restricted. Analyze levels of classification and determine the appropriate classification for the document.</b>
+        <i>Critical -  Documents labeled as critical contain information that is too valuable to permit any risk of its capture, and viewing is severely restricted.</i>
             
-    <b>04) </b>
-        <i> </i>
+    <b>04) A tech company is looking to secure data in a specific state. The state is 'in transit', meaning the data is being transmitted over a network. What data protection mechanism is most suitable for this data state?</b>
+        <i>TLS (Transport Layer Security) or IPSec (Internet Protocol Security) - TLS or IPSec protocols help protect data as it moves across networks, ensuring that it remains confidential and hasn't been tampered with during transmission.</i>
       
-    <b>05) </b>
-        <i> </i>
+    <b>05) Choose which of the following items classify as direct Personally Identifiable Information. (Select all that apply.)</b>
+        <i>Full Name; Date of Birth -  A full name can be used to identify, contact, or locate an individual. A full name is an identifier and can be used to search for a person to locate more PII that can be used to contact or locate a person.
+
+            A date of birth can be used to identify, contact, or locate an individual. This information is often used when verifying identity and may be used by an attacker to obtain unauthorized access into accounts and obtain other PII.</i>
         
-    <b>06) </b>
-        <i> </i>
+    <b>06) A company utilizing formal data governance assigns the role of data steward to an employee. Evaluate the roles within data governance and conclude which tasks the employee in this role performs.</b>
+        <i>The employee ensures data is labeled and identified with appropriate metadata. - The data steward is primarily responsible for data quality. This involves tasks such as ensuring data is labeled and identified with appropriate
+             metadata, and data is collected and stored in a format with values that comply with applicable laws and regulations. </i>
       
-    <b>07) </b>
-        <i> </i>
+    <b>07) An organization suspects that a visitor is performing data exfiltration while on the premises. The organization knows that the visitor does not have any type of access to computer systems. Which of the following methods does the organization suspect the visitor of using? (Select all that apply.)</b>
+        <i>Phone; Camera - Data exfiltration can happen by communicating information orally over a telephone, cell phone, or Voice over IP (VoIP) network. Cell phone text messaging is another possibility.
+            
+            A camera can capture images or video of data. This data may be computer data. Since the visitor has no access to computer systems, other targets may be paper documents, post-it notes on desks, building layouts, and more.</i>
         
-    <b>08) </b>
-        <i> </i>
-      
-    <b>09) </b>
-        <i> </i>
+    <b>08) A network manager assists with developing a policy to protect the company from data exfiltration. The employee devises a list of focus points to include. Which plans, when consolidated, provide the best protection for the company? (Select all that apply.)</b>
+        <i>Creating a training program for all employees that reiterates the importance of knowing how to use encryption to secure data.;
+            Only allow removable media if it is company property, if it is required to perform a task, and if it has been cleared through; the proper channels
+            Encrypt all sensitive data at rest and disconnect systems that are storing archived data from the network - 
         
-    <b>10) </b>
-        <i> </i>
+            Employees need training in document confidentiality and how to use encryption to store and transmit data securely. Annual refresher training will remind employees of its importance.
+
+            One mechanism for data exfiltration is by copying data to removable media or other device storage, such as USB drives or memory cards. Limiting the use of these to company property and only for job-related tasks helps reduce this risk.
+            
+            Always encrypt sensitive data at rest. Transferring data outside of the network will likely be useless without the decryption key.</i>
       
+    <b>09) Analyze the features of Microsoft's Information Rights Management (IRM) and choose the scenarios that accurately depict IRM. (Select all that apply.)</b>
+        <i>File Permissions are assigned based on the roles within a document;
+            A document is emailed as an attachment, but cannot be printed by the receiver;
+            An email message cannot be forwarded to another employee. - 
+            
+            A benefit of IRM is that file permissions can be assigned for different document roles, such as author, editor, or reviewer. Each role can have specific access such as sending, printing, and editing.
+
+            Printing and forwarding of documents can be restricted even when the document is sent as a file attachment. This means that just because a document is forwarded it may not have printing capabilities.
+
+            Printing and forwarding of email messages can be restricted.</i>
+        
+    <b>10) A new cloud-based application will replicate its data on a global scale, but will exclude residents of the European Union. Which concerns should the organization that provides the data to consumers take into consideration? (Select all that apply.)</b>
+        <i>Sovereignty; Data Location -  Data sovereignty refers to a jurisdiction preventing or restricting processing and storage from taking place on systems that do not physically reside within that jurisdiction.
+
+            Storage locations might have to be carefully selected to mitigate data sovereignty issues. Most cloud providers allow a choice of data centers for processing and storage.</i>
 <h2>Labs and Sims</h2>
 <h3>Sim 15B - Apply Cloud Security</h3>
 <h3>Sim 16A - Explain Privacy and Data Sensitivity</h3>
