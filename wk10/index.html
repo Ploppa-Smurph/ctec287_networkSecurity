@@ -131,6 +131,11 @@
             Storage locations might have to be carefully selected to mitigate data sovereignty issues. Most cloud providers allow a choice of data centers for processing and storage.</i>
 <h2>Labs and Sims</h2>
 <h3>Sim 15B - Apply Cloud Security</h3>
+       container        = programmatic (group); private; internal (external, subscription) 
+       back-end server  = programmatic (group, none, root); private; internal
+       front-end server = user (group, none); public; external
+       users            = client (group, user); subscription (none, private); customer (internal, subscription)
+       post security    = root; user account; (develop, external, programmatic, user)      
 <h3>Sim 16A - Explain Privacy and Data Sensitivity</h3>
 </pre>    
 </body>
