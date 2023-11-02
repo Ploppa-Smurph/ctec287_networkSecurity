@@ -92,33 +92,44 @@ Recovery time must be considered, as some incidents that need to have complex sy
 
         Counterintelligence provides information about how to configure and audit active logging systems so that they are most likely to capture evidence of attempted and successful intrusions. </i>
 
-<b>02) </b>    
-    <i> </i>
+<b>02) A systems breach occurs at a manufacturer. The system in question contains highly valuable data. An engineer plans a live acquisition, but ultimately, is not successful. What reason may be stopping the engineer?</b>    
+    <i>The tools are not preinstalled or running - A specialist hardware or software tool can capture the contents of memory while the host is running (live acquisition). This type of tool needs to be pre-installed or a standalone executable needs to be run, as it requires a kernel mode driver to dump any data of interest. </i>
 
-<b>03) </b>
-    <i> </i>
+<b>03) Which term defines the practice of collecting evidence from computer systems to an accepted standard in a court of law?</b>
+    <i>Forensics - Computer forensics is the practice of collecting evidence from computer systems to an accepted standard in a court of law. </i>
 
-<b>04) </b>
-    <i> </i>
-    
-<b>05) </b>
-    <i> </i>
-    
-<b>06) </b>
-    <i> </i>
-    
-<b>07) </b>
-    <i> </i>
-    
-<b>08) </b>
-    <i> </i>
+<b>04) An engineer plans to acquire data from a disk. The disk is connected to the forensics workstation and is ready for the engineer. Which steps indicate a correct order of acquisition as they relate to integrity and non-repudiation?</b>
+    <i>1- hash of disk is made; 2- bit-by-bit copy is made; 3- a second hash is made; 4- copy is made of the reference image 
+        In the correct first step, the engineer makes a cryptographic hash of the disk media, using either the MD5 or SHA hashing function. The output of the function is a checksum.
 
-<b>09) </b>
-    <i> </i>
+        In the correct second step, the engineer makes a bit-by-bit copy of the media using the imaging utility.
+        
+        In the correct third step, the engineer then makes a second hash of the image, which should match the original hash of the media.
+        
+        In the correct fourth step, the engineer makes a copy of the reference image and then validates it again by the checksum. The engineer then performs an analysis on the copy.    </i>
     
-<b>10) </b>
-    <i> </i>
+<b>05) A system breach occurs at a retail distribution center. Data from a persistent disk is required as evidence. No write blocker technology is available. Which approach does a security analyst use to acquire the disk?</b>
+    <i>Snapshot - A snapshot is a live acquisition image of a persistent disk. It may have less validity than an image taken from a device using a write blocker technology. </i>
     
+<b>06) Which of the following is an example of the process of identifying and de-duplicating files and metadata to be stored for evidence in a trial?</b>
+    <i>eDiscovery - eDiscovery is a means of filtering the relevant evidence produced from all the data gathered by a forensic examination and storing it in a database in a format to use as evidence in a trial. </i>
+    
+<b>07) A systems breach occurs at a financial organization. The system in question contains highly valuable data. When performing data acquisition for an investigation, which component does an engineer acquire first?</b>
+    <i>Disk Controller Cache - The order of volatility outlines a general list of which components the engineer should examine for data. The engineer should first examine CPU registers and cache memory (including the cache on disk controllers and GPUs). </i>
+    
+<b>08) An engineer retrieves data for a legal investigation related to an internal fraud case. The data in question is from an NTFS volume. What will the engineer have to consider with NTFS when documenting a data timeline?</b>
+    <i>UTC Time - NTFS uses UTC "internally." When collecting evidence, it is vital to establish the procedure to calculate a timestamp and note the difference between the local system time and UTC. </i>
+
+<b>09) A cloud server has been breached. The organization realizes that data acquisition differs in the cloud when compared to on-premises. What roadblocks may the organization have to consider when considering data? (Select all that apply.)</b>
+    <i>On-Demand Services; Jurisdiction; Chain of Custody - 
+        The on-demand nature of cloud services means that instances are often created and destroyed again, with no real opportunity for forensic recovery of any data.
+
+Jurisdiction and data sovereignty may restrict what evidence the CSP is willing to release to the organization.
+
+Chain of custody issues are complex as it may have to rely on the CSP to select and package data for the organization. </i>
+    
+<b>10) A security expert archives sensitive data that is crucial to a legal case involving a data breach. The court is holding this data due to its relevance. The expert fully complies with any procedures as part of what legal process?</b>
+    <i>Legal Hold - Legal hold refers to information that the security expert must preserve, which may be relevant to a court case. Regulators or the industry's best practice may define the information that is subject to legal hold. </i>    
 <h2>Labs and Sims</h2>
 <h3>Lab : Managing Data Sources for Incident Response</h3>
 <h3>Lab : Configuring Mitigation Controls</h3>
