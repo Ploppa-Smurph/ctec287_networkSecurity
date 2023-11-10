@@ -134,9 +134,8 @@
         SLE (Single Loss Expectancy)   - 50000
         ALE (Annual Loss Expectancy)   - 250000
         ALEm (Mitigated)               - 80%
-
         ROSI  = ($250000 * .80 - $50000) / $50000
-        ROSI% = not 200%, 260%
+        ROSI% = 300%
         Solution Saves  = $150000
         Strategy Action = mitgate
         Recommendation  = Purchase SIEM w/ UEBA/SOAR
@@ -144,6 +143,12 @@
         Theft  = high
 
 <h3>Sim 20A: Implement Redundancy Strategies</h3>
+        Raid 1 = d0=bit1    d1= bit1      d2= bit1      protect data? yes
+                 d0=bit2    d1= bit2      d2= bit2
+
+        Raid 5 = d0=bit1    d1= bit2      d2= parity bit     protect data? yes
+                 d0=bit2    d1= parity    d2= bit1
+                 d0=parity  d1= bit1      d2= bit2  
 </pre>    
 </body>
 </html>
